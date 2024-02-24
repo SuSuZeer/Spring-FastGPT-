@@ -1,0 +1,41 @@
+server: #47.236.235.78
+  ip: 127.0.0.1
+  port: 8081
+spring:
+  application:
+    name: Fast
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/fast?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 791616
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 1000
+        max-idle: 1000
+        min-idle: 0
+        time-between-eviction-runs: 10s
+        max-wait: 10000
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+email:
+  config:
+    codeLen: 6
+    qq: 1733981286
+    toSendEmail: 1733981286@qq.com
+    sender: HackerGPT
+    authPwd: vzixcuxeuidgeijg #这里填授权码
+    title: HackerGPT验证码
+    content: 尊敬的用户:你好! 你的HackerGPT验证码为
+
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+mybatis-plus:
+  type-aliases-package: org.Fast.entity # 别名扫描包

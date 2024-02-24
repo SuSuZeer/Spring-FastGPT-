@@ -1,0 +1,11 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 其他配置项 -->
+
+    <typeHandlers>
+        <!-- 注册自定义的类型处理器 -->
+        <typeHandler handler="org.Fast.mapper.JSONArrayTypeHandler"/>
+    </typeHandlers>
+</configuration>

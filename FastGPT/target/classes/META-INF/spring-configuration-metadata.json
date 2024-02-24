@@ -1,0 +1,54 @@
+{
+  "groups": [
+    {
+      "name": "email.config",
+      "type": "org.Fast.utils.EmailUtil",
+      "sourceType": "org.Fast.utils.EmailUtil"
+    }
+  ],
+  "properties": [
+    {
+      "name": "email.config.auth-pwd",
+      "type": "java.lang.String",
+      "description": "开启IMAP\/SMTP服务获取的授权码",
+      "sourceType": "org.Fast.utils.EmailUtil"
+    },
+    {
+      "name": "email.config.code-len",
+      "type": "java.lang.Integer",
+      "description": "验证码长度",
+      "sourceType": "org.Fast.utils.EmailUtil"
+    },
+    {
+      "name": "email.config.content",
+      "type": "java.lang.String",
+      "description": "邮件的内容",
+      "sourceType": "org.Fast.utils.EmailUtil"
+    },
+    {
+      "name": "email.config.qq",
+      "type": "java.lang.String",
+      "description": "发送邮箱验证码的qq号",
+      "sourceType": "org.Fast.utils.EmailUtil"
+    },
+    {
+      "name": "email.config.sender",
+      "type": "java.lang.String",
+      "description": "发件人",
+      "sourceType": "org.Fast.utils.EmailUtil"
+    },
+    {
+      "name": "email.config.title",
+      "type": "java.lang.String",
+      "description": "邮件的主题",
+      "sourceType": "org.Fast.utils.EmailUtil"
+    },
+    {
+      "name": "email.config.to-send-email",
+      "type": "java.lang.String",
+      "description": "发送邮件的邮箱",
+      "sourceType": "org.Fast.utils.EmailUtil"
+    }
+  ],
+  "hints": []
+}
