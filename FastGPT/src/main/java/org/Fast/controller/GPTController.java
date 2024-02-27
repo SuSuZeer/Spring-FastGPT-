@@ -7,6 +7,7 @@ import org.Fast.entity.GPTGroup;
 import org.Fast.mapper.GPTGroupMapper;
 import org.Fast.mapper.GPTMapper;
 import org.Fast.service.GPTService;
+import org.Fast.utils.UseFastAPI;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -30,6 +31,8 @@ public class GPTController
     private GPTGroupMapper gptGroupMapper;
 
 
+    @Resource
+    private UseFastAPI useFastAPI;
     /**
      *description<GPT管理>
     []
@@ -45,7 +48,7 @@ public class GPTController
     @GetMapping("/GetAppidList")
     public Result getappid(){
         //这里要套一下FastGPT接口 获取appid列表
-        return Result.ok();
+        return Result.ok(useFastAPI.getAppid());
 }
 
     @PostMapping("/AddGPT")

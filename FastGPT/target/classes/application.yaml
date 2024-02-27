@@ -1,18 +1,18 @@
-server: #47.236.235.78
+server:
   ip: 127.0.0.1
   port: 8081
 spring:
   application:
     name: Fast
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/fast?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.jdbc.Driver #记得两个地方都有mysql的配置 都要改
+    url: jdbc:mysql://47.236.235.78:3306/fast?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
-    password: 791616
+    password: 369369 #服务器369369  本地791616
   redis:
     host: 127.0.0.1
     port: 6379
-    password:
+    password: null
     lettuce:
       pool:
         max-active: 1000
@@ -21,21 +21,21 @@ spring:
         time-between-eviction-runs: 10s
         max-wait: 10000
   jackson:
-    default-property-inclusion: non_null # JSON处理时忽略非空字段
+    default-property-inclusion: non_null
 email:
   config:
     codeLen: 6
     qq: 1733981286
     toSendEmail: 1733981286@qq.com
     sender: HackerGPT
-    authPwd: vzixcuxeuidgeijg #这里填授权码
+    authPwd: vzixcuxeuidgeijg
     title: HackerGPT验证码
     content: 尊敬的用户:你好! 你的HackerGPT验证码为
-
   jpa:
     properties:
       hibernate:
         jdbc:
           time_zone: UTC
 mybatis-plus:
-  type-aliases-package: org.Fast.entity # 别名扫描包
+  type-aliases-package: org.Fast.entity
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE4YzA3ODhmMDZlZWIzNjE4NGJjZGQiLCJ0ZWFtSWQiOiI2NWE4YzA3ODhmMDZlZWIzNjE4NGJjZmIiLCJ0bWJJZCI6IjY1YThjMDc4OGYwNmVlYjM2MTg0YmNmZCIsImV4cCI6MTcwOTQ3MzM3MCwiaWF0IjoxNzA4ODY4NTcwfQ.uSdUNcOMeHzqjpfY2dYCR9lWbg6HnKuHtaXvX0E2rGA

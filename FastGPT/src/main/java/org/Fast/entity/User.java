@@ -24,12 +24,13 @@ public class User implements Serializable {
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-    private String nickname;
+    private String nickname;//用户登录名
     private String account;//Email
     private String team;
     private String language;
     private String password;
     private double balance;
     private String icon;
+    private String token;
 
 }

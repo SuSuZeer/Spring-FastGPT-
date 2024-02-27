@@ -17,7 +17,8 @@
       "name": "email.config.code-len",
       "type": "java.lang.Integer",
       "description": "验证码长度",
-      "sourceType": "org.Fast.utils.EmailUtil"
+      "sourceType": "org.Fast.utils.EmailUtil",
+      "defaultValue": 6
     },
     {
       "name": "email.config.content",

@@ -44,9 +44,9 @@ public class MybatisConfig {
         // 配置您的数据源，这里使用 DriverManagerDataSource 作为示例
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/fast?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true");
+        dataSource.setUrl("jdbc:mysql://47.236.235.78:3306/fast?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true");
         dataSource.setUsername("root");
-        dataSource.setPassword("791616");
+        dataSource.setPassword("369369");
         return dataSource;
     }
 

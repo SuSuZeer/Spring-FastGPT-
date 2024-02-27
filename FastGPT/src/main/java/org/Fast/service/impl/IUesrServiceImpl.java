@@ -89,12 +89,13 @@ public class IUesrServiceImpl extends ServiceImpl<IUserMapper, User> implements 
         String token = UUID.randomUUID().toString(true);
         // 7.3.存储
         String tokenKey = LOGIN_USER_KEY + token;
+        user.setToken(token);
+        save(user);
         stringRedisTemplate.opsForValue().set(tokenKey, JSONUtil.toJsonStr(user));
         // 7.4.设置token有效期
         stringRedisTemplate.expire(tokenKey, LOGIN_USER_TTL, TimeUnit.HOURS);
         // 8.返回token
         return Result.ok(token);
-
     }
     private User createUserWithEmail(String email,String password) {
         // 1.创建用户
